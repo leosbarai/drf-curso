@@ -23,4 +23,3 @@ typed-ast==1.4.1
 validate-docbr==1.10.0
 whitenoise==6.2.0
 wrapt==1.12.1
-python=3.8.10
