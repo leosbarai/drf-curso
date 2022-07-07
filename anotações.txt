@@ -1,0 +1,28 @@
+* Criar ambiente virtual => python3 -m venv ./venv
+* Ativar ambiente virtual => source venv/bin/activate
+* Verificar versões dos frameworks: pip freeze
+* Instalar frameworks via arquivo: pip install -r arquivo.txt
+* Criar app => python manage.py startapp escola
+* Subir server => python manage.py runserver
+
+https://www.django-rest-framework.org/
+
+Criar as migrações para o banco => python manage.py makemigrations
+Subir para o banco de dados => python manage.py migrate
+Criar o super usuário para o admin => python manage.py createsuperuser
+http://localhost:8000/admin/
+
+Heroku (logar na plataforma online antes):
+* pip install django-heroku
+* pip install gunicorn==20.0.4
+* pip freeze > requirements.txt (atualizar dependências do projeto no arquivo)
+* no terminal: heroku login
+
+* git init (iniciar o repositório)
+* git add .
+* git commit -m "deploy do projeto"
+* heroku git:remote -a drf-curso
+* git push heroku master (verificar se está na branch master do projeto)
+* heroku run python manage.py migrate
+* heroku run python manage.py createsuperuser
+* heroku run python populate_script.py (executar o script lá no heroku)
